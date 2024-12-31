@@ -1,0 +1,48 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="{%static 'css/payment.css'%}">
+</head>
+<body>
+    <div class="main">
+        <div class="sub2">
+            <div class="head">
+                <h1>Payment Opptions</h1><br>
+                <p>fill the following data</p>
+                <p>it will take a few minitues</p>
+            </div>
+            
+            <div>
+                <form class="f1" >
+                    <div class="s1">
+                        <label>Address</label>
+                        <input type="text" placeholder="Enter Address" class="inner"><br>
+                        <label>Enter UPI ID</label>
+                        <input type="text" placeholder="enter Id" class="inner"><br>
+                        <label>full name</label>
+                        <input type="text" placeholder="enter full name" class="inner">
+                    </div>
+                    <div class="s2">
+                        <label>mobile number</label>
+                        <input type="number" placeholder="enter mobile number" class="inner"><br>
+                        <label>email</label>
+                        <input type="text" placeholder="enter email" class="inner"><br>
+                        <label>Payment method</label>
+                        <select class="inner">
+                            <option>UPI Payment</option>
+                            <option>Cash on delivery</option>
+                        </select>                    
+                    </div>
+                </form>
+                <a href="{%url 'confirmation'%}"><input type="submit" value="next"></a>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

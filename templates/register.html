@@ -1,0 +1,41 @@
+<div class="main">
+    <h2>Enter Details</h2>
+    <form method="post" class="form">
+        {% csrf_token %}
+        {{ form }}
+        <br>
+        <p style="color: gray;">By continuing, I agree to BOOK STALLS's privacy policy.<br> Terms of use.</p>
+        <input type="submit" value="continue" class="butt">
+    </form>
+</div>
+<style>
+    .main{
+        width: 100%;
+        height: 700px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+    .box{
+        width: 390px;
+        height: 50px;
+        border-radius: 10px;
+        
+
+    }
+    .form{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        
+    }
+    .butt{
+        width: 150px;
+        height: 40px;
+        background-color: black;
+        color: white;
+        border-radius: 30px;
+    }
+</style>

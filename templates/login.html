@@ -1,0 +1,24 @@
+{%load static%}
+<link rel="stylesheet" href="{%static 'css/forms.css'%}">
+<form method="post">
+    {%csrf_token%}
+    <div class="main">
+        <h2>Enter Login Details</h2>
+        <div class="container">
+
+            <input type="text" placeholder="enter user name" name="username" class="box">
+            <input type="password" placeholder="enter password" name="password" class="box">
+            <input type="submit" value="login" class="butt">
+        </div>
+        
+
+    </div>
+
+</form>
+{% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+        <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+        {% endfor %}
+    </ul>
+{% endif %}
